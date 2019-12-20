@@ -25,6 +25,17 @@ class _QiblaState extends State<QiblaPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+            leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.blueGrey[800],
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ),
           backgroundColor: Colors.grey[300],
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

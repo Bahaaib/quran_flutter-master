@@ -11,13 +11,12 @@ import 'package:quran_images/splash.dart';
 
 import 'helper/app_localizations.dart';
 
-class MyApp extends StatelessWidget{
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Colors.blueGrey[900]
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.blueGrey[900]));
+        
     // TODO: implement build
     return Provider(
       builder: (_) => AppDatabase(),
@@ -56,7 +55,8 @@ class MyApp extends StatelessWidget{
         ),
         home: SplashScreen(),
         routes: <String, WidgetBuilder>{
-          '/HomeScreen': (BuildContext context) => QuranShow(initialPageNum: PrefService.getInt("start_page")),
+          '/HomeScreen': (BuildContext context) =>
+              QuranShow(initialPageNum: PrefService.getInt("start_page")),
           '/SettingPage': (BuildContext context) => SettingPage()
         },
       ),
