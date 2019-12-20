@@ -1,0 +1,71 @@
+<LinearLayout android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ddd"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:id="@+id/dial"
+            android:layout_width="@dimen/dial"
+            android:layout_height="@dimen/dial"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/compass_dial"
+            android:src="@drawable/dial" />
+
+        <ImageView
+            android:id="@+id/qibla_indicator"
+            android:layout_width="@dimen/qibla"
+            android:layout_height="@dimen/qibla"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/compass_hands"
+            android:scaleType="fitXY"
+            android:src="@drawable/qibla" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/angle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/footer_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bottom_image"
+            android:src="@drawable/footer"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/footer_image" />
+
+        <TextView
+            android:id="@+id/your_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

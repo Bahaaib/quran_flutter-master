@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutcompass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    >
+
+    <ImageView
+        android:id="@+id/main_image_compass"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/compass" />
+
+    <ImageView
+        android:id="@+id/main_image_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="170sp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/needle" />
+
+    <LinearLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_image_compass"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="marquee"
+            android:ems="12"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Tap on Screen to Change Compass Theme"
+            android:textColor="#000"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Direction_Qibla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Qibla_Distance"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/Qibla_Distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5.0dip"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="18.0sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
